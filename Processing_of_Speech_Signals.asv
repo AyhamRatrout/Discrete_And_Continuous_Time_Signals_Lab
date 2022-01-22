@@ -1,0 +1,3 @@
+[audio, Fs] = audioread('speech.au');
+audiowrite(audio, F)
+plot(audio);
