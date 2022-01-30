@@ -29,7 +29,6 @@ title('Plot of the Signal cos(ωn) * 1.0^n * u(n) Over the Interval [-1, 10]');
 xlabel('n');
 ylabel('cos(ωn) * 1.0^n * u(n)');
 
-% Define and plot the first variation of the function/signal.
 y3 = cos(omega .* n) .* ((a3).^n) .* unit_step;
 subplot(3, 1, 3);
 orient('tall');

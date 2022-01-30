@@ -1,16 +1,10 @@
 function I = integ1(N)
     dx  = (2*pi - 0) / N;
+    nArray = 0:dx:2*pi;
+    
+    % arrayfun to calculate height of each rectangle
+    fullarray = arrayfun(@(x)(sin(5.*x))^2, nArray);
 
-    n = 0;
-    A = zeros(N, 0);
-    counter = 1;
-
-    while n < (2 * pi)
-        A(counter) = dx * ((sin(5 * n))^2);
-        n = n + dx;
-        counter = counter + 1;
-    end
-
-    I = sum(A, "all");
-
+    %sum the elements of the array and multiply by dx for the area
+    I = dx*sum(fullarray, "all");
 end
